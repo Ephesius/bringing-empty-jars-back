@@ -1,0 +1,266 @@
+<!-- Adds the empty jar item back to the game -->
+<!-- Creates "bundle" items that contain the food item and the empty jar that was used to make it -->
+<BringingEmptyJarsBack>
+    <!-- Add the empty jar item back into the game -->
+    <append xpath="/items">
+        <item name="drinkJarEmpty">
+	        <property name="HoldType" value="3"/>
+	        <property name="Meshfile" value="@:Other/Items/Food/emptyJarPrefab.prefab"/>
+	        <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+	        <property name="CustomIcon" value="cntBarrelWhiteSingle00"/>
+            <property name="CustomIconTint" value="d7e9f5"/>
+            <property name="Material" value="Mglass"/>
+	        <property name="Stacknumber" value="10"/>
+	        <property name="Weight" value="10"/>
+	        <property name="EconomicValue" value="6"/>
+	        <property name="CraftingIngredientTime" value="9"/>
+	        <property class="Action1">
+		        <property name="Class" value="CollectWater"/> <!-- changed: value="ExchangedItem" to value="CollectWater" -->
+		        <property name="Delay" value="1.0"/>
+		        <property name="Change_item_to" value="drinkJarRiverWater"/>
+		        <property name="Do_block_action" value="deplete1"/>
+		        <property name="Focused_blockname_1" value="water"/>
+		        <property name="Focused_blockname_2" value="waterMoving"/>
+		        <property name="Focused_blockname_3" value="waterStaticBucket"/>
+		        <property name="Focused_blockname_4" value="waterMovingBucket"/>
+		        <property name="Focused_blockname_5" value="terrWaterPOI"/>
+            </property>
+	        <property name="Group" value="Resources"/>
+        </item>
+        
+        <!-- Corn Bread & Empty Jar bundle -->
+        <item name="foodCornBreadEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodCornBread"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodCornBreadEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodCornBread,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Boiled Meat & Empty Jar bundle -->
+        <item name="foodBoiledMeatEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodBoiledMeat"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodBoiledMeatEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodBoiledMeat,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Vegetable Stew & Empty Jar bundle -->
+        <item name="foodVegetableStewEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodVegetableStew"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodVegetableStewEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodVegetableStew,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Meat Stew & Empty Jar bundle -->
+        <item name="foodMeatStewEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodMeatStew"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodMeatStewEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodMeatStew,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Hobo Stew & Empty Jar bundle -->
+        <item name="foodHoboStewEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodHoboStew"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodHoboStewEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodHoboStew,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Blueberry Pie & Empty Jar bundle -->
+        <item name="foodBlueberryPieEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodBlueberryPie"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodBlueberryPieEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodBlueberryPie,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Pumpkin Pie & Empty Jar bundle -->
+        <item name="foodPumpkinPieEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodPumpkinPie"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodPumpkinPieEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodPumpkinPie,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Pumpkin Cheesecake & Empty Jar bundle -->
+        <item name="foodPumpkinCheesecakeEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodPumpkinCheesecake"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodPumpkinCheesecakeEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodPumpkinCheesecake,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Pumpkin Bread & Empty Jar bundle -->
+        <item name="foodPumpkinBreadEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodPumpkinBread"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodPumpkinBreadEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodPumpkinBread,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+
+        <!-- Boiled Egg & Empty Jar bundle -->
+        <item name="foodEggBoiledEmptyJar">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="Extends" value="questRewardBundleMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="foodEggBoiled"/>
+            <property name="CustomIconTint" value="ffffff"/>
+            <property name="Stacknumber" value="10"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <property name="DescriptionKey" value="foodEggBoiledEmptyJarDesc"/>
+            <property class="Action0">
+                <property name="Create_item" value="foodEggBoiled,drinkJarEmpty"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+        </item>
+    </append>
+
+     <!-- Keep empty jar after drinking a jar of murky water -->
+     <append xpath="items/item[@name='drinkJarRiverWater']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+     </append>
+
+    <!-- Keep empty jar after drinking a jar of boiled water -->
+    <append xpath="/items/item[@name='drinkJarBoiledWater']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of pure mineral water -->
+    <append xpath="/items/item[@name='drinkJarPureMineralWater']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of yucca juice -->
+    <append xpath="/items/item[@name='drinkJarYuccaJuice']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of yucca juice smoothie -->
+    <append xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of goldenrod tea -->
+    <append xpath="/items/item[@name='drinkJarGoldenRodTea']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of red tea -->
+    <append xpath="/items/item[@name='drinkJarRedTea']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of coffee -->
+    <append xpath="/items/item[@name='drinkJarCoffee']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of beer -->
+    <append xpath="/items/item[@name='drinkJarBeer']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of Grandpa's moonshine -->
+    <append xpath="/items/item[@name='drinkJarGrandpasMoonshine']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of Grandpa's awesome sauce -->
+    <append xpath="/items/item[@name='drinkJarGrandpasAwesomeSauce']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of Grandpa's learning elixer -->
+    <append xpath="/items/item[@name='drinkJarGrandpasLearningElixir']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+
+    <!-- Keep empty jar after drinking a jar of Grandpa's forgetting elixer -->
+    <append xpath="/items/item[@name='drinkJarGrandpasForgettingElixir']/property[@class='Action0']">
+        <property name="Create_item" value="drinkJarEmpty"/>
+    </append>
+</BringingEmptyJarsBack>

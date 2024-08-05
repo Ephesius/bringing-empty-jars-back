@@ -1,0 +1,124 @@
+<!-- Removes recipes of food items that use boiled water or beer as an ingredient, and replaces them with the "food item/empty jar" bundle recipes -->
+
+<BringingEmptyJarsBack>
+    <!-- Remove all of the food item recipes that use boiled water or beer to make -->
+    <remove xpath="/recipes/recipe[@name='foodCornBread']"/>
+    <remove xpath="recipes/recipe[@name='foodBoiledMeat']"/>
+    <remove xpath="recipes/recipe[@name='foodMeatStew']"/>
+    <remove xpath="recipes/recipe[@name='foodHoboStew']"/>
+    <remove xpath="recipes/recipe[@name='foodBlueberryPie']"/>
+    <remove xpath="recipes/recipe[@name='foodPumpkinPie']"/>
+    <remove xpath="recipes/recipe[@name='foodPumpkinCheesecake']"/>
+    <remove xpath="recipes/recipe[@name='foodPumpkinBread']"/>
+    <remove xpath="recipes/recipe[@name='foodEggBoiled']"/>
+    <remove xpath="recipes/recipe[@name='foodVegetableStew']"/>
+
+    <!-- Add the "food item/empty jar" bundle recipes -->
+    <append xpath="/recipes">
+        <!-- Add back the recipe to craft empty jars at a forge -->
+        <recipe name="drinkJarEmpty" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+	        <ingredient name="unit_glass" count="10"/>
+	        <ingredient name="unit_clay" count="1"/>
+	        <effect_group>
+		        <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_clay,unit_glass"/>
+	        </effect_group>
+        </recipe>
+
+        <!-- Add the recipe to craft boiled water using an empty jar and a snowball at a campfire -->
+        <recipe name="drinkJarBoiledWater" count="1" craft_area="campfire" tags="perkMasterChef">
+	        <ingredient name="resourceSnowBall" count="1"/>
+	        <ingredient name="drinkJarEmpty" count="1"/>
+        </recipe>
+
+        <!-- Replaces the original recipe, making a "bundle" that gives the food item plus the empty jar it took to make it -->
+        <!-- Corn Bread & Empty Jar bundle recipe -->
+        <recipe name="foodCornBreadEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perksMasterChef,learnable">
+            <ingredient name="foodCornMeal" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+        </recipe>
+
+        <!-- Boiled Meat & Empty Jar bundle recipe -->
+        <recipe name="foodBoiledMeatEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodRawMeat" count="5"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodRawMeat"/>
+            </effect_group>
+        </recipe>
+
+        <!-- Vegetable Stew & Empty Jar bundle recipe -->
+        <recipe name="foodVegetableStewEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodCropPotato" count="2"/>
+            <ingredient name="foodCropCorn" count="2"/>
+            <ingredient name="foodCropMushrooms" count="2"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+        </recipe>
+
+        <!-- Meat Stew & Empty Jar bundle recipe -->
+        <recipe name="foodMeatStewEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodRawMeat" count="5"/>
+            <ingredient name="foodCropPotato" count="2"/>
+            <ingredient name="foodCropCorn" count="2"/>
+            <ingredient name="resourceAnimalFat" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodRawMeat"/>
+            </effect_group>
+        </recipe>
+
+        <!-- Hobo Stew & Empty Jar bundle recipe -->
+        <recipe name="foodHoboStewEmptyJar" count="1" craft_time="65" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodRottingFlesh" count="10"/>
+            <ingredient name="foodCropPotato" count="2"/>
+            <ingredient name="foodCropCorn" count="2"/>
+            <ingredient name="resourceAnimalFat" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-2,-4" tags="foodRottingFlesh"/>
+            </effect_group>
+        </recipe>
+
+        <!-- Blueberry Pie & Empty Jar bundle recipe -->
+        <recipe name="foodBlueberryPieEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodCropBlueberries" count="5"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodCornMeal" count="1"/>
+            <ingredient name="resourceAnimalFat" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,3" operation="base_add" value="-1,-2" tags="foodCropBlueberries"/>
+            </effect_group>
+        </recipe>
+
+        <!-- Pumpkin Pie & Empty Jar bundle recipe -->
+        <recipe name="foodPumpkinPieEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodCropPumpkin" count="2"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodCornMeal" count="1"/>
+            <ingredient name="resourceAnimalFat" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+        </recipe>
+
+        <!-- Pumpkin Cheesecake & Empty Jar bundle recipe -->
+        <recipe name="foodPumpkinCheesecakeEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodCropPumpkin" count="1"/>
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="foodCornMeal" count="1"/>
+            <ingredient name="resourceAnimalFat" count="1"/>
+            <ingredient name="drinkJarBeer" count="1"/>
+        </recipe>
+
+        <!-- Pumpkin Bread & Empty Jar bundle recipe -->
+        <recipe name="foodPumpkinBreadEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+            <ingredient name="foodCropPumpkin" count="1"/>
+            <ingredient name="foodCornMeal" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+        </recipe>
+
+        <!-- Boiled Egg & Empty Jar bundle recipe -->
+        <recipe name="foodEggBoiledEmptyJar" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
+            <ingredient name="foodEgg" count="1"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+        </recipe>
+    </append>
+</BringingEmptyJarsBack>

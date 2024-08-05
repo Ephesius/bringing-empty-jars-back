@@ -1,0 +1,31 @@
+<!-- Replaces unlocking of food items with their respective "food item/empty jar" bundles -->
+
+<BringingEmptyJarsBack>
+    <!-- Corn Bread -->
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[contains(@icon, 'foodCornBread')]/unlock_entry[contains(@item, 'foodCornBread')]/@item">foodCornBreadEmptyJar,drinkJarGoldenRodTea</set>
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[contains(@tags, 'foodCornBread')]/@tags">foodCornBreadEmptyJar,drinkJarGoldenRodTea</set>
+
+    <!-- Boiled Meat -->
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[contains(@icon, 'foodBoiledMeat')]/unlock_entry[contains(@item, 'foodBoiledMeat')]/@item">foodBoiledMeatEmptyJar,drinkJarYuccaJuice</set>
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[contains(@tags, 'foodBoiledMeat')]/@tags">foodBoiledMeatEmptyJar,drinkJarYuccaJuice</set>
+
+    <!-- Vegetable Stew & Meat Stew -->
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[contains(@icon, 'foodMeatStew')]/unlock_entry[contains(@item, 'foodMeatStew')]/@item">foodVegetableStew,foodMeatStewEmptyJar</set>
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[contains(@tags, 'foodMeatStew')]/@tags">foodVegetableStewEmptyJar,foodMeatStewEmptyJar</set>
+
+    <!-- Hobo Stew -->
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[contains(@icon, 'foodHoboStew')]/unlock_entry[contains(@item, 'foodHoboStew')]/@item">foodHoboStewEmptyJar</set>
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[contains(@tags, 'foodHoboStew')]/@tags">foodHoboStewEmptyJar</set>
+
+    <!-- Blueberry Pie & Pumpkin Bread-->
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[contains(@icon, 'foodPumpkinPie')]/unlock_entry[contains(@item, 'foodBlueberryPie')]/@item">foodPumpkingBreadEmptyJar,foodBlueberryPieEmptyJar</set>
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[contains(@tags, 'foodBlueberryPie')]/@tags">foodPumpkinBreadEmptyJar,foodBlueberryPieEmptyJar</set>
+
+    <!-- Pumpkin Pie -->
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[contains(@icon, 'foodPumpkinPie')]/unlock_entry[contains(@item, 'foodPumpkinPie')]/@item">foodPumpkinPieEmptyJar</set>
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[contains(@tags, 'foodPumpkinPie')]/@tags">foodPumpkinPieEmptyJar</set>
+
+    <!-- Pumpkin Cheesecake -->
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/display_entry[contains(@icon, 'foodPumpkinCheesecake')]/unlock_entry[contains(@item, 'foodPumpkinCheesecake')]/@item">foodPumpkinCheesecakeEmptyJar</set>
+    <set xpath="/progression/crafting_skills/crafting_skill[@name='craftingFood']/effect_group/passive_effect[contains(@tags, 'foodPumpkinCheesecake')]/@tags">foodPumpkinCheesecakeEmptyJar</set>
+</BringingEmptyJarsBack>

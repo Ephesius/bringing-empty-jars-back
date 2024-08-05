@@ -1,0 +1,7 @@
+<ModInfo>
+    <Name value="BringingEmptyJarsBack"/>
+    <Version value="1.0.0"/>
+    <DisplayName value="Bringing Empty Jars Back"/>
+    <Description value="Re-enables the ability to keep the empty jar after drinking from a jar with contents or cooking an item that requires a jar of water. Empty jars can now be crafted in a forge again. Empty jars can be used, along with a snowball, to make boiled water at a camp fire"/>
+    <Author value="ephesius"/>
+</ModInfo>
